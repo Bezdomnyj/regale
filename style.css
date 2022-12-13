@@ -1,0 +1,149 @@
+body {
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 40px 0;
+}
+
+:root {
+    --green: #9bb622;
+    --orange: #dd4720;
+  }
+
+.main-container {
+    border: 4px solid var(--green);
+    margin: auto;
+    max-width: 1400px;
+    padding: 15px;
+}
+.main-title {
+    color: var(--orange);
+    font-size: 72px;
+    font-weight: bold;
+    padding: 15px 0;
+    text-align: center;
+}
+.gift {
+    display: none;
+    text-align: center;
+    margin-top: 30px;
+}
+.gift.show {
+    display: block;
+}
+.gift .next-level {
+    border: 2px solid var(--orange);
+    height: 40px;
+    line-height: 40px;
+    width: 150px;
+    background-color: white;
+    transition: all 0.2s ease;
+}
+.gift .next-level:hover {
+    background-color: var(--green);
+    border: 2px solid var(--green);
+}
+
+/* Livello generico */
+.levels {
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+.levels .level div[class*="level--level"] {
+    transition: all 0.2s ease;
+    margin-bottom: 30px;
+}
+.levels .level div[class*="level--level"].level-completed {
+    margin-bottom: 0px;
+}
+div[id*="main-content"] {
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+div[class*="level--level"] {
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+/* .level .initialized div[id*="main-content"] { */
+.level .initialized {
+    height: 600px;
+}
+/* .level div[class*="level--level"]:not(.initialized) div[id*="main-content"] { */
+.level div[class*="level--level"]:not(.initialized) {
+    height: 0px !important;
+}
+.initialized .level--game-description {
+    display: block;
+    padding: 10px 0;
+    font-size: 14px;
+}
+.level--game-description {
+    display: none;
+}
+.level-completed .level--main-title:after {
+    content: ' completato';
+    color: var(--green);
+}
+.level-completed .level--main-title {
+    color: var(--green);
+}
+.level--main-title {
+    color: var(--orange);
+    transition: color 0.3s ease;
+    font-weight: bold;
+}
+
+/* Livello 1 */
+.faces-list, .names-list {
+    margin-top: 25px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: 250px;
+}
+.face {
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 140px;
+    border: 1px solid var(--green);
+}
+.to-link img {
+    display: none;
+}
+.to-link .dropzone {
+    display: flex;
+}
+.face img {
+    transition: all 0.3s ease;
+    max-width: 100%;
+}
+.face img:hover:not(.completed) {
+    scale: 1.5;
+}
+.completed {
+    opacity: 0.3;
+}
+.face img .completed:hover {
+    scale: 1;
+}
+.developer-name.dropzone {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 140px;
+    height: 140px;
+}
+.dropzone {
+    display: none;
+}
+
+/* Livello 2 */
+
+#main-content--level-2 {
+    height: 200px;
+    width: 200px;
+    background-color: var(--orange);
+}
