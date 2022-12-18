@@ -25,7 +25,6 @@
         <div class="main-container">
             <div class="main-title">RegALE di NatALE di ALE</div>
             <div class="levels">
-
                 <!-- Livello 1  -->
                 <div class="level" id="level-1">
 
@@ -152,10 +151,121 @@
 
                 <!-- Livello 4  -->
                 <div class="level" id="level-4">
-                    <div class="title"></div>
-                    <div class="description"></div>
+                    <div class="title">Il questionario Regale</div>
+                    <div class="description">Dimostra di conoscere il tuo team, sfruttando logica e memoria!</div>
                     <div class="content">
                         <!-- Contenuto livello 4 -->
+                        <form onsubmit="game.handleSubmit(event)" class="content">
+                            <div class="question-container">
+                                <h4 class="question-title">Qual è il numero di interno di Semir?</h4>
+                                <div class="answer-list">
+                                    <div class="question-radio-container">
+                                        <input id="internal_phone_20" type="radio" value=20 name="question-radio_internalPhone">
+                                        <label for="internal_phone_20" class="question-label">
+                                            <div class= "custom-radio"></div>
+                                            <span>20</span>
+                                        </label>
+                                    </div>
+                                    <div class="question-radio-container">
+                                        <input id="internal_phone_17" type="radio" value=17 name="question-radio_internalPhone">
+                                        <label for="internal_phone_17" class="question-label">
+                                            <div class= "custom-radio"></div>
+                                            <span>17</span>
+                                        </label>
+                                    </div>
+                                    <div class="question-radio-container">
+                                        <input id="internal_phone_12" type="radio" value=12 name="question-radio_internalPhone">
+                                        <label for="internal_phone_12" class="question-label">
+                                            <div class= "custom-radio"></div>
+                                            <span>12</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question-container">
+                                <h4 class="question-title">In base al periodo di assunzione, scegli l'ordinamento corretto:</h4>
+                                <div class="answer-list">
+                                    <div class="question-radio-container">
+                                        <input id="assumption-combo-1" type="radio" value="Michele -> Leonardo -> Lorenzo -> Semir -> Natalia" name="question-radio_assumption">
+                                        <label for="assumption-combo-1" class="question-label">
+                                            <div class= "custom-radio"></div>
+                                            <span>Michele -> Leonardo -> Lorenzo -> Semir -> Natalia</span>
+                                        </label>
+                                    </div>
+                                    <div class="question-radio-container">
+                                        <input id="assumption-combo-2" type="radio" value="Semir -> Natalia -> Leonardo -> Lorenzo -> Michele" name="question-radio_assumption">
+                                        <label for="assumption-combo-2" class="question-label">
+                                            <div class= "custom-radio"></div>
+                                            <span>Semir -> Natalia -> Leonardo -> Lorenzo -> Michele</span>
+                                        </label>
+                                    </div>
+                                    <div class="question-radio-container">
+                                        <input id="assumption-combo-3" type="radio" value="Michele -> Leonardo -> Lorenzo -> Natalia -> Semir" name="question-radio_assumption">
+                                        <label for="assumption-combo-3" class="question-label">
+                                            <div class= "custom-radio"></div>
+                                            <span>Michele -> Leonardo -> Lorenzo -> Natalia -> Semir</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question-container hidden-question cerca-bene">
+                                <h4 class="question-title">Chi è il developer pazzo che ha avuto questa idea regale?</h4>
+                                <div class="answer-list">
+                                    <div class="question-radio-container">
+                                        <input id="crazy-dev-1" type="radio" value="Lorenzo" name="question-radio_hidden">
+                                        <label for="crazy-dev-1" class="question-label">
+                                            <div class= "custom-radio"></div>
+                                            <span>Lorenzo</span>
+                                        </label>
+                                    </div>
+                                    <div class="question-radio-container">
+                                        <input id="crazy-dev-2" type="radio" value="Daniele" name="question-radio_hidden">
+                                        <label for="crazy-dev-2" class="question-label">
+                                            <div class= "custom-radio"></div>
+                                            <span>Daniele</span>
+                                        </label>
+                                    </div>
+                                    <div class="question-radio-container">
+                                        <input id="crazy-dev-3" type="radio" value="Leonardo"name="question-radio_hidden">
+                                        <label for="crazy-dev-3" class="question-label">
+                                            <div class= "custom-radio"></div>
+                                            <span>Leonardo</span>
+                                        </label>
+                                    </div>
+                                    <div class="question-radio-container">
+                                        <input id="crazy-dev-4" type="radio" value="Natalia" name="question-radio_hidden">
+                                        <label for="crazy-dev-4" class="question-label">
+                                            <div class= "custom-radio"></div>
+                                            <span>Natalia</span>
+                                        </label>
+                                    </div>
+                                    <div class="question-radio-container">
+                                        <input id="crazy-dev-5" type="radio" value="Andrea" name="question-radio_hidden">
+                                        <label for="crazy-dev-5" class="question-label">  <div class= "custom-radio"></div>
+                                            <span>Andrea</span>
+                                        </label>
+                                    </div>
+                                    <div class="question-radio-container">
+                                        <input id="crazy-dev-6" type="radio" value="Semir" name="question-radio_hidden">
+                                        <label for="crazy-dev-6" class="question-label">
+                                             <div class= "custom-radio"></div>
+                                             <span>Semir</span>
+                                        </label>
+                                    </div>
+                                    <div class="question-radio-container">
+                                        <input id="crazy-dev-7" type="radio" value="Michele" name="question-radio_hidden">
+                                        <label for="crazy-dev-7" class="question-label">
+                                            <div class= "custom-radio"></div>
+                                            <span>Michele</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="questionnaire-button-container">
+                                <button type="submit" class="send-button">Conferma il questionario</button>
+                            </div>
+                            <div id="question_form_error"></div>
+                        </form>
                     </div>
 
                     <!-- Messaggio finale regalo, con immagine -->
