@@ -79,10 +79,6 @@
                                 <img src="assets/images/giuseppe2.jpg">
                                 <div class="developer-name">Giuseppe</div>
                             </div>
-                            <div class="face" data-name="daniele" ondragover="game.handleOver(event)" ondrop="game.handleDrop(event)">
-                                <img src="assets/images/daniele2.jpg">
-                                <div class="developer-name">Daniele</div>
-                            </div>
                             <div class="face" data-name="natalia" ondragover="game.handleOver(event)" ondrop="game.handleDrop(event)">
                                 <img src="assets/images/natalia2.jpg">
                                 <div class="developer-name">Natalia</div>
@@ -94,6 +90,10 @@
                             <div class="face" data-name="niki" ondragover="game.handleOver(event)" ondrop="game.handleDrop(event)">
                                 <img src="assets/images/niki2.jpg">
                                 <div class="developer-name">Niki</div>
+                            </div>
+                            <div class="face" data-name="daniele" ondragover="game.handleOver(event)" ondrop="game.handleDrop(event)">
+                                <img src="assets/images/daniele2.jpg">
+                                <div class="developer-name">Daniele</div>
                             </div>
                             <div class="face" data-name="leonardo" ondragover="game.handleOver(event, 1)" ondrop="game.handleDrop(event, 1)">
                                 <img src="assets/images/leonardo2.jpg">
@@ -109,7 +109,9 @@
                             <div class="next-level" onclick="game.unlockLevel(2)">
                                 <span>Prossimo livello</span>
                             </div>
-                            <img src="">
+                            <div class="gift-image">
+                                <img src="assets/images/regAle1.jpg">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -143,7 +145,9 @@
                             <div class="next-level" onclick="game.unlockLevel(3)">
                                 <span>Prossimo livello</span>
                             </div>
-                            <img src="">
+                            <div class="gift-image">
+                                <img src="assets/images/regAle2.jpg">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -172,7 +176,9 @@
                             <div class="next-level" onclick="game.unlockLevel(4)">
                                 <span>Prossimo livello</span>
                             </div>
-                            <img src="">
+                            <div class="gift-image">
+                                <img src="assets/images/regAle3.jpg">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -300,12 +306,13 @@
                     <div class="end" >
                         <div class="gift">
                             <div class="text">Ottimo! Hai completato il quarto livello. Ora puoi aprire l'ultimo regALE</div>
-                            <img src="">
+                            <div class="gift-image">
+                                <img src="assets/images/regAle4.jpg">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div onclick="game.resetGame()">reset</div>
         </div>
     </body>
 </html>

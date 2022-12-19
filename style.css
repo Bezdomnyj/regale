@@ -55,6 +55,7 @@ body {
 .level .content {
     
 }
+
 .level:not(.current):not(.completed) {
     display: none;
 }
@@ -62,6 +63,7 @@ body {
 .level.current .content, .level.current .title, .level.current .description, .level.completed .end {
     display: block
 }
+
 .level.completed .content, .level.completed .title, .level.completed .description, .level.current .end {
     display: none
 }
@@ -69,9 +71,11 @@ body {
 .level .end {
     margin: 40px auto;
 }
+
 .level .end .gift .text {
     text-align: center;
 }
+
 .next-level {
     height: 50px;
     width: 200px;
@@ -79,14 +83,28 @@ body {
     margin: 30px auto;
     transition: all 0.2s ease;
 }
+
 .next-level:hover {
     background-color: var(--green);
 }
+
 .next-level span {
     display: block;
     color: white;
     line-height: 50px;
     text-align: center;
+}
+
+.gift-image {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+.gift-image img {
+    max-width: 100%;
+    max-height: 450px;
 }
 
 /* Livello 1 */
@@ -187,18 +205,25 @@ body {
     border-radius: 30%;
     width: 400px;
     margin: auto;
+    cursor: url('assets/images/guantone.png'), pointer;
 }
+
 .click-box:active {
+    background-image: url(assets/images/giuseppe2hitted.jpg);
     scale: 0.97;
+    cursor: url('assets/images/guantone2.png'), pointer;
 }
+
 .scores {
     display: flex;
     gap: 40px;
     justify-content: center;
 }
+
 .best {
 
 }
+
 .times-clicked {
 
 }

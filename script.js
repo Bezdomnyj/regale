@@ -190,7 +190,7 @@ class Levels {
 		let valid = validator.validateAnswers();
 		if (valid) {
 			validator.clearFormError();
-			alert("Congrats!!")
+            this.completeLevel(4);
 		}
     }
 }
@@ -239,7 +239,6 @@ class FormValidator {
 	setFormError(errorMsg){
 		const formError = document.getElementById("question_form_error");
 		formError.innerHTML = errorMsg;
-		console.error(errorMsg);
 		this.valid = false;
 	}
 
