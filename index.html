@@ -28,8 +28,8 @@
                 <!-- Livello 1  -->
                 <div class="level" id="level-1">
 
-                    <div class="title"></div>
-                    <div class="description"></div>
+                    <div class="title">Livello 1!!111!!!1!!</div>
+                    <div class="description">Ciao Ale! Questo è il primo dei 4 livelli che dovrai superare per ottenere tutti i tuoi regAle. In questo particolare livello dovrai portare i nostri faccioni sui relativi nomi. Facile, no?</div>
 
                     <!-- Contenuto livello 1 -->
                     <div class="content">
@@ -103,9 +103,12 @@
                     </div>
 
                     <!-- Messaggio finale regalo, con immagine -->
-                    <div class="end">
+                    <div class="end" >
                         <div class="gift">
                             <div class="text">Ottimo! Hai completato il primo livello. Ora puoi aprire il primo regALE</div>
+                            <div class="next-level" onclick="game.unlockLevel(2)">
+                                <span>Prossimo livello</span>
+                            </div>
                             <img src="">
                         </div>
                     </div>
@@ -114,17 +117,32 @@
                 <!-- Livello 2  -->
                 <div class="level" id="level-2">
 
-                    <div class="title"></div>
-                    <div class="description"></div>
+                    <div class="title">Livello 2!!!</div>
+                    <div class="description">Clicca più veloce che puoi. Ti basteranno 10 secondi per cliccare 80 volte?</div>
 
                     <!-- Contenuto livello 2 -->
                     <div class="content">
+                        <div class="click-box" onclick="game.handleClick()"></div>
+                        <div class="timer" id="timer">10.00 s</div>
+                        <div class="scores">
+                            <div>
+                                <span>Numero di click:</span>
+                                <span class="times-clicked" id="times-clicked">0</span>
+                            </div>
+                            <div>
+                                <span>Miglior risultato:</span>
+                                <span class="best" id="best">0</span>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Messaggio finale regalo, con immagine -->
-                    <div class="end">
+                    <div class="end" >
                         <div class="gift">
                             <div class="text">Ottimo! Hai completato il secondo livello. Ora puoi aprire il secondo regALE</div>
+                            <div class="next-level" onclick="game.unlockLevel(3)">
+                                <span>Prossimo livello</span>
+                            </div>
                             <img src="">
                         </div>
                     </div>
@@ -133,17 +151,27 @@
                 <!-- Livello 3  -->
                 <div class="level" id="level-3">
 
-                    <div class="title"></div>
-                    <div class="description"></div>
+                    <div class="title">Terzooo livellooooOOOoOoOOooO!!! Pazzesco</div>
+                    <div class="description">Spero che tu abbia sudato per passare il secondo livello, qui le cose si faranno meno agitate. CLICCA IL RIQUADRO UNA VOLTA PER DIRCI CHE SEI PRONTO E UN'ALTRA ANCORA APPENA CAMBIA COLORE!!! Se sarai abbastanza VELOCE riceverai il tuo regAle!</div>
 
                     <!-- Contenuto livello 3 -->
                     <div class="content">
+                        <div class="reaction-click">
+                            <div class="click-faster-container">
+                                <div class="click-faster start" id="click-faster-start" onclick="game.startReaction()"></div>
+                                <div class="click-faster stop" id="click-faster-stop" onclick="game.stopReaction()"></div>
+                            </div>
+                            <div class="reaction-time" id="reaction-time">0 ms</div>
+                        </div>
                     </div>
-
+                    
                     <!-- Messaggio finale regalo, con immagine -->
-                    <div class="end">
+                    <div class="end" >
                         <div class="gift">
                             <div class="text">Ottimo! Hai completato il terzo livello. Ora puoi aprire il terzo regALE</div>
+                            <div class="next-level" onclick="game.unlockLevel(4)">
+                                <span>Prossimo livello</span>
+                            </div>
                             <img src="">
                         </div>
                     </div>
@@ -200,7 +228,7 @@
                                         </label>
                                     </div>
                                     <div class="question-radio-container">
-                                        <input id="assumption-combo-3" type="radio" value="Michele -> Leonardo -> Lorenzo -> Natalia -> Semir" name="question-radio_assumption">
+                                        <input id="assumption-combo-3" type="radio" value="Michele -> Lorenzo -> Leonardo -> Natalia -> Semir" name="question-radio_assumption">
                                         <label for="assumption-combo-3" class="question-label">
                                             <div class= "custom-radio"></div>
                                             <span>Michele -> Leonardo -> Lorenzo -> Natalia -> Semir</span>
@@ -269,14 +297,15 @@
                     </div>
 
                     <!-- Messaggio finale regalo, con immagine -->
-                    <div class="end">
+                    <div class="end" >
                         <div class="gift">
-                            <div class="text">Ottimo! Hai completato il quarto livello. Ora puoi aprire il quarto regALE</div>
+                            <div class="text">Ottimo! Hai completato il quarto livello. Ora puoi aprire l'ultimo regALE</div>
                             <img src="">
                         </div>
                     </div>
                 </div>
             </div>
+            <div onclick="game.resetGame()">reset</div>
         </div>
     </body>
 </html>
