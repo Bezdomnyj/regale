@@ -68,7 +68,9 @@ class Levels {
                 e => e !== dropEvent.target.dataset.name
             )
             if (this.developersAndGiuseppe.length === 0) {
-                this.completeLevel(1);
+                setTimeout(() => {
+                    this.completeLevel(1);
+                }, 1500);
             }
         }
     }
@@ -99,7 +101,7 @@ class Levels {
                             this.best = this.timesClicked;
                             window.localStorage.setItem('best', this.best)
                         }
-                        if (this.timesClicked > 80) {
+                        if (this.timesClicked > 85) {
                             this.completeLevel(2);
                         }
                         this.first = true;
@@ -196,25 +198,32 @@ class Levels {
 }
 
 class FormValidator {
-	constructor(formData){
+    
+	constructor(formData) {
 		this.formData = formData;
 		this.answers = {
 			"internalPhone": "17",
-			"assumption": "Michele -> Lorenzo -> Leonardo -> Natalia -> Semir",
-			"hidden": "Leonardo",
+			"assumption": "yep",
+			"hidden": "Daniele",
+			"paninozzo": "Mortazza",
+			"comment": "yep",
+            "js": "yep",
+            "paint": "yep",
+            "friends": "yep",
+            "enemy": "yep",
 		};
 		this.valid = true;
 	}
-	validateAnswers(){
+
+	validateAnswers() {
 
 		let questions = document.querySelectorAll(".question-container:not(.hidden-question)");
 		let hiddenQuestions = document.querySelectorAll(".hidden-question");
 		let givenQuestions = Array.from(this.formData.keys()).length;
 
-		if(givenQuestions < questions.length){
+		if (givenQuestions < questions.length) {
 			this.setFormError("Inserisci tutte le risposte!");
-		}
-		else{
+		} else {
 			let questionError = false;
 			for (let [key, val] of this.formData.entries()) {
 				let ansKey = key.split("_")[1];
@@ -224,7 +233,7 @@ class FormValidator {
 					break;
 				}
 			}
-			if(questions.length === givenQuestions && !questionError){
+			if (questions.length === givenQuestions && !questionError) {
 				this.setFormError("Ci sei quasi! Manca ancora qualcosa...  cerca-bene");
 			}
 		}
@@ -245,7 +254,7 @@ class FormValidator {
 	setQuestionError(inputName,errorText) {
 		let input = document.querySelector("[name=" + inputName + "]");
 		let container = input.closest(".question-container");
-		container.scrollIntoView();
+		container.scrollIntoView({behavior: 'smooth'});
 		container.classList.add("error");
 		setTimeout(() => {
 			container.classList.remove("error");

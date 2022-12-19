@@ -22,6 +22,8 @@ body {
     margin: 20px auto;
     padding: 20px;
     width: 1600px;
+    display: flex;
+    flex-direction: column;
 }
 
 .main-title {
@@ -33,7 +35,6 @@ body {
 }
 
 .levels {
-
 }
 
 /* Genercici livello */
@@ -96,6 +97,7 @@ body {
 }
 
 .gift-image {
+    position: relative;
     display: flex;
     margin: auto;
     justify-content: center;
@@ -106,6 +108,13 @@ body {
     max-width: 100%;
     max-height: 450px;
 }
+.gius-stramazzato {
+    position: absolute;
+    width: 149px;
+    transform: translate(-180px, -180px);
+    height: auto;
+}
+
 
 /* Livello 1 */
 
@@ -282,6 +291,13 @@ body {
 .level form.content .question-container{
 
 }
+.level form.content .question-container .code{
+    padding: 20px;
+    background-color: darkslategrey;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    width: fit-content;
+}
 .level form.content .question-container .answer-list{
     display: flex;
     flex-direction: column;
@@ -345,18 +361,35 @@ body {
 .level form.content .questionnaire-button-container button.send-button{
     display: inline-block;
     color: white;
-    background-color: green;
+    background-color: var(--orange);
     padding: 10px;
     margin: auto;
     cursor: pointer;
+    -webkit-appearance: none;
+    padding: 10px;
+    transition: all 0.2s ease;
+    border: none;
+    height: 40px;
+    width: 180px;
+}
+.level form.content .questionnaire-button-container button.send-button:hover {
+    background-color: var(--green);
 }
 .level form.content .questionnaire-button-container button.send-button:active{
     background-color: white;
     color: black;
-    border-color: green;
+    background-color: var(--orange);
+
 }
 .level form.content #question_form_error{
     font-weight: bold;
     color: red;
+}
+.questions {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 580px;
+    margin-bottom: 10px;
+    padding: 0 20px;
 }
 
